@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file action-a/Dockerfile --tag yxnn14/reojean:$(date +%s)
     - name: Docker Push
-      run: docker push $username/repojean
+      run: docker push $username/repojean:latest
