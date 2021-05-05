@@ -21,6 +21,6 @@ jobs:
       run:
         docker login -u $username -p $password
     - name: Build the Docker image
-      run: docker build . --file action-a/Dockerfile --tag yxnn14/repojean:$(date +%s)
+      run: docker build . --file action-a/Dockerfile --tag yxnn14/repojean:latest
     - name: Docker Push
-      run: sudo docker push yxnn14/repojean:$(date +%s)
+      run: sudo docker push yxnn14/repojean:latest
