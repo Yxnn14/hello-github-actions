@@ -21,6 +21,6 @@ jobs:
       run:
         docker login -u $username -p $password
     - name: Build the Docker image
-      run: docker build . --file action-a/Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/repojean:latest
+      run: docker build . --file action-a/Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/repojean:$(date +%s)
     - name: Docker Push
-      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/repojean:latest
+      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/repojean:$(date +%s)
