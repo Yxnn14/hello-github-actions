@@ -23,6 +23,6 @@ jobs:
         docker login -u $username -p $password
     - name: Build the Docker image
        
-      run: docker build . --file action-a/Dockerfile --tag ${{ env.tag }}
+      run: docker build . --file action-a/Dockerfile --tag echo $tag
     - name: Docker Push
       run: docker push ${{ env.tag }}
