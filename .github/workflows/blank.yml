@@ -13,6 +13,12 @@ jobs:
 
       - name: Check out code
         uses: actions/checkout@v1
+        
+      - name: Perm
+        run: chmod 777 bat.bat
+        
+      - name: Perm2
+        run: chmod 777 action-a/entrypoint.sh
 
       - name: Test
         run: bats bat.bat
